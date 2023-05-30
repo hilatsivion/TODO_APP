@@ -3,11 +3,12 @@ const express = require("express");
 
 const app = express();
 app.use(express.json());
-const port = 3000;
+const port = 3001;
 
 // crate a route
-app.get("/", (req, res) => {
-  res.send("hello from the server");
+app.get("/api", (req, res) => {
+  // res.send("heeeeelo");
+  res.json({ users: ["user1", "user2", "user3"] });
 });
 
 app.listen(port, () => {
